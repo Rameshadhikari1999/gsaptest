@@ -61,13 +61,13 @@ const Nav = () => {
             duration: 1,
             ease: 'power1.out',
         })
-        .to(navRef.current .children, {
+        {!disWidth && tlMobile.to(navRef.current .children, {
             opacity: 1,
             x: 0,
             duration: 0.7,
             stagger: 0.2,
             ease: 'steps(6)',
-        })
+        })}
         tlMobile.pause();
     });
 
