@@ -56,20 +56,20 @@ const Nav = () => {
     // animation for mobile nav 
     const tlMobile = gsap.timeline();
     useGSAP(() => {
-        tlMobile.to("#navContainer", {
+        {!disWidth && tlMobile.to("#navContainer", {
             y: 0,
             duration: 1,
             ease: 'power1.out',
         })
-        {!disWidth && tlMobile.to(navRef.current .children, {
+         .to(navRef.current .children, {
             opacity: 1,
             x: 0,
             duration: 0.7,
             stagger: 0.2,
             ease: 'steps(6)',
-        })}
+        })
         tlMobile.pause();
-    });
+    }});
 
 
     const handleClose = () => {
