@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      fontFamily: {
+        'gupter': ['Gupter', 'serif'],
+        'eduarda': ['Edu+AU+VIC+WA+NT+Hand', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }

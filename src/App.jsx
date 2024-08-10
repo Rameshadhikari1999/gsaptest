@@ -1,9 +1,12 @@
 import React from 'react'
+import Nav from './layout/Header/Nav'
+import Hero from './components/home/Hero'
 
 const App = () => {
   return (
-    <div className='bg-red-600'>
-      <h1>Vite + React</h1>
+    <div className='w-screen'>
+      <Nav/>
+      <Hero/>
     </div>
   )
 }
