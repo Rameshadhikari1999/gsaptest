@@ -19,6 +19,37 @@ const Hero = () => {
         scrub: true,
       },
     });
+
+    let tl = gsap.timeline();
+    // tl.to("#heroContent", {
+    //   opacity: 1,
+    //   duration: 0.5,
+    //   ease: "power3.out",
+    // });
+    tl.from("#heroContent h1", {
+      scale: 0,
+      opacity: 0,
+      duration: 1,
+      delay:3,
+      ease: "power3.out",
+      // stagger: 0.2,
+    });
+    tl.from("#heroContent p", {
+      scale: 0,
+      opacity: 0,
+      duration: 1,
+      delay:0.1,
+      ease: "power3.out",
+      // stagger: 0.2,
+    });
+    tl.from("#getStarted", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      delay:0.1,
+      ease: "power3.out",
+      // stagger: 0.2,
+    });
   });
   return (
     <>
@@ -33,7 +64,7 @@ const Hero = () => {
         </div>
 
         <div className="pt-16 w-full h-[90%]">
-          <div className=" w-full h-full flex items-center justify-center gap-5 flex-col">
+          <div id="heroContent" className=" w-full h-full flex items-center justify-center gap-5 flex-col">
             <h1 className="text-white text-2xl md:text-4xl tracking-wider px-5 text-center  font-bold capitalize font-gupter">
               get your desired car in resonable price
             </h1>
@@ -41,7 +72,7 @@ const Hero = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <div>
+            <div id="getStarted">
               <Buttons text="Get Started" />
             </div>
           </div>
