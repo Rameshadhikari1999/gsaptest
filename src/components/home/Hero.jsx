@@ -21,12 +21,12 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className='w-full h-screen bg-[url("./assets/images/welcome-hero/welcome-banner.jpg")] bg-cover bg-center'
+      className='w-[100%] mx-auto h-screen bg-[url("./assets/images/welcome-hero/welcome-banner.jpg")] bg-cover bg-center'
     >
       <div
         className="w-full h-full bg-blue-950/50"
       >
-        <div id="mainNav" className="w-full fixed top-0 left-0 p-5">
+        <div id="mainNav" className="w-full fixed top-0 left-0 px-10 py-5">
           <Nav />
         </div>
       </div>
