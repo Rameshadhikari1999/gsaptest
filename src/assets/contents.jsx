@@ -1,5 +1,5 @@
 const menu = ['Home', 'Service', 'feature cars', 'new cars', 'brands', 'contact'];
-const search = [
+const searchWithKey = [
     {
       id: 1,
       name: "Select year",
@@ -60,5 +60,5 @@ const search = [
   ];
 
 
-export { menu, search };
+export { menu, searchWithKey };
 
