@@ -1,53 +1,34 @@
-import React from "react";
-import Buttons from "../../utils/Buttons.jsx";
+import Nav from "../../layout/Header/Nav.jsx";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-
-  // animation for hero
   useGSAP(() => {
-    const tl = gsap.timeline();
-    tl.from("#hero h1", {
-      opacity: 0,
-      duration: 0.5,
-      delay: 3,
-      scale: 0.1,
-      ease: "bounce.out",
+    gsap.to("#mainNav",{
+      backgroundColor: "rgba(0,0,0,1)",
+      scrollTrigger: {
+        trigger: "#home",
+        scroller: "body",
+        start: "top top",
+        end: "bottom top",
+        scrub:true,
+      },
     })
-    .from("#hero p", {
-      x:-100,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-    })
-    .from("#hero #heroBtn", {
-      x: 100,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-    });
-  });
-
-
+  })
   return (
-    <div className='w-full h-screen bg-[url("./assets/images/welcome-hero/welcome-banner.jpg")] bg-cover bg-center'>
-
-      <div id="hero" className="w-full h-full bg-blue-950/50 flex items-center justify-center flex-col pt-10">
-
-        <h1 className=" text-2xl md:text-4xl text-center font-bold text-white uppercase">
-          get your desired car in resonable price
-        </h1>
-
-        <p className="text-white text-lg w-3/4 lg:w-1/2 text-center py-10">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-
-      <div id="heroBtn">
-        <Buttons  text="Contact us" />
-      </div>
-
+    <div
+      id="home"
+      className='w-full h-screen bg-[url("./assets/images/welcome-hero/welcome-banner.jpg")] bg-cover bg-center'
+    >
+      <div
+        className="w-full h-full bg-blue-950/50"
+      >
+        <div id="mainNav" className="w-full fixed top-0 left-0">
+          <Nav />
+        </div>
       </div>
     </div>
   );

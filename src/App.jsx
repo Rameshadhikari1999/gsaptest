@@ -1,12 +1,15 @@
 import React from 'react'
-import Nav from './layout/Header/Nav'
 import Hero from './components/home/Hero'
+import Service from './components/Service'
+
+
 
 const App = () => {
+  
   return (
-    <div className='w-screen'>
-      <Nav/>
+    <div className='w-screen overflow-x-hidden'>
       <Hero/>
+      <Service/>
     </div>
   )
 }

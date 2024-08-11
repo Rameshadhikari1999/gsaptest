@@ -7,7 +7,7 @@ import gsap from 'gsap';
 
 const MobileNav = ({ onClose, navRef}) => {
   return (
-    <div id='navContainer' className='w-screen h-[90vh] absolute top-0 left-0 -translate-y-[90vh] bg-black/90'>
+    <div id='navContainer' className='w-screen h-[90vh] absolute top-0 left-0 -translate-y-[90vh] bg-black/90 opacity-0'>
       <div className='absolute top-8 left-10 p-2 text-white font-bold bg-red-400/40 rounded-full'>
         <IoCloseSharp size={50} onClick={onClose}/>
       </div>
