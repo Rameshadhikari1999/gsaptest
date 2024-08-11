@@ -26,7 +26,7 @@ const Hero = () => {
       <div
         className="w-full h-full bg-blue-950/50"
       >
-        <div id="mainNav" className="w-full fixed top-0 left-0">
+        <div id="mainNav" className="w-full fixed top-0 left-0 p-5">
           <Nav />
         </div>
       </div>

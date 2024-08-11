@@ -19,7 +19,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className='w-full flex items-center justify-between lg:justify-around px-5 py-4'>
+    <nav className='w-full flex items-center justify-between lg:justify-around'>
       {!disWith &&<div className='text-white cursor-pointer'>
         <IoMenu size={40} />
       </div>}
