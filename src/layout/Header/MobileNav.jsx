@@ -10,13 +10,13 @@ const MobileNav = ({onClose}) => {
       className="w-screen h-[90vh] absolute top-0 left-0 text-white bg-black/90
       -translate-y-[90vh] "
     >
-      <div className="absolute top-10 right-10 p-5 bg-black rounded-full">
+      <div id="close" className="absolute top-5 left-10 p-5 bg-black rounded-full">
         <IoCloseSharp size={20} onClick={onClose} />
       </div>
       <ul className="w-full h-full flex flex-col items-center justify-center">
         {menu.map((item, index) => (
           <li id="navLinks"  key={index} className="py-2">
-          <NavLink item={item} />
+          <NavLink item={item} onClick={onClose} />
           </li>
         ))}
         
