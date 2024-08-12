@@ -4,10 +4,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Buttons from "../../utils/Buttons.jsx";
 import { searchWithKey } from "../../assets/contents.jsx";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+
+  const [searchKey, setSearchKey] = useState({
+    year:"",
+    Make:"",
+    model:"",
+    style:"",
+    brand:"",
+    price:"",
+  });
+
+  const handelSearch = () => {
+    console.log("ok");
+    console.log("searchKey",searchKey);
+  };
+
+  // hero animation
   useGSAP(() => {
     gsap.to("#mainNav", {
       backgroundColor: "rgba(0,0,0,1)",
@@ -21,16 +38,11 @@ const Hero = () => {
     });
 
     let tl = gsap.timeline();
-    // tl.to("#heroContent", {
-    //   opacity: 1,
-    //   duration: 0.5,
-    //   ease: "power3.out",
-    // });
     tl.from("#heroContent h1", {
       scale: 0,
       opacity: 0,
       duration: 1,
-      delay:3,
+      delay:1.5,
       ease: "power3.out",
       // stagger: 0.2,
     });
@@ -51,6 +63,8 @@ const Hero = () => {
       // stagger: 0.2,
     });
   });
+
+
   return (
     <>
     <div
@@ -73,7 +87,7 @@ const Hero = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div id="getStarted">
-              <Buttons text="Get Started" />
+              <Buttons text="Get Started" onClick={handelSearch} />
             </div>
           </div>
         </div>
@@ -82,18 +96,20 @@ const Hero = () => {
     </div>
 
     <div className="w-[90%] mx-auto bg-white h-[80vh] lg:h-[60vh] -translate-y-24 shadow-sm shadow-gray-400 rounded flex justify-between flex-wrap">
-      {searchWithKey.map((item) => (
+      {searchWithKey.map((item, index) => (
         <div key={item.id} className="w-full md:w-1/2 lg:w-1/3 h-[14%] lg:h-1/4 my-auto flex items-center justify-center flex-col shrink-0">
           <label
-            htmlFor="year"
+            htmlFor={item.name.toLowerCase()}
             className="w-3/4 mx-auto text-xl tracking-wide font-bold text-gray-900 font-gupter capitalize"
           >
             {item.name}
           </label>
           <select
-            name="year"
-            id="year"
-            className="w-3/4 mx-auto outline-none border-none text-lg capitalize text-gray-400 font-gupter"
+            name={item.name.toLowerCase()}
+            id={item.name.toLowerCase()}
+            value={searchKey[index - 1]}
+            onChange={(e) => setSearchKey({ ...searchKey[index -1], [index - 1]: e.target.value })}
+            className="w-3/4 mx-auto outline-none border-none text-lg capitalize text-gray-400 font-gupter bg-transparent p-2 rounded"
           >
             {item.selectOpt.map((option, index) => (
               <option key={index} value={option}>{option}</option>
