@@ -16,7 +16,6 @@ const ClientSay = () => {
               start: "top center",
               end: "bottom top",
               scrub: true,
-              markers: true,
               pin: true,
           },
       });
@@ -41,7 +40,7 @@ const ClientSay = () => {
         {client.map((item, index) => (
           <div
             key={index}
-            className={`w-full h-full flex-shrink-0 flex items-center justify-center`}
+            className={`w-full h-full flex-shrink-0 flex items-center justify-center gap-5 px-10`}
           >
             <div className="shadow-sm w-full lg:w-1/4 bg-primary rounded shadow-orange-200  p-5 hover:scale-105 transition-all ease-linear duration-300">
 

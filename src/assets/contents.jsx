@@ -1,18 +1,27 @@
 import { FaCar, BiSolidCarMechanic, IoDocumentText } from "./incons.jsx";
-import img1 from '../assets/images/new-cars-model/ncm1.png'
-import img2 from '../assets/images/new-cars-model/ncm2.png'
-import img3 from '../assets/images/new-cars-model/ncm3.png'
-import fc1 from '../assets/images/featured-cars/fc1.png'
-import fc2 from '../assets/images/featured-cars/fc2.png'
-import fc3 from '../assets/images/featured-cars/fc3.png'
-import fc4 from '../assets/images/featured-cars/fc4.png'
-import fc5 from '../assets/images/featured-cars/fc5.png'
-import fc6 from '../assets/images/featured-cars/fc6.png'
-import fc7 from '../assets/images/featured-cars/fc7.png'
-import fc8 from '../assets/images/featured-cars/fc8.png'
-import client1 from '../assets/images/clients/c1.png'
-import client2 from '../assets/images/clients/c2.png'
-import client3 from '../assets/images/clients/c3.png'
+import img1 from '../assets/images/new-cars-model/ncm1.png';
+import img2 from '../assets/images/new-cars-model/ncm2.png';
+import img3 from '../assets/images/new-cars-model/ncm3.png';
+
+import fc1 from '../assets/images/featured-cars/fc1.png';
+import fc2 from '../assets/images/featured-cars/fc2.png';
+import fc3 from '../assets/images/featured-cars/fc3.png';
+import fc4 from '../assets/images/featured-cars/fc4.png';
+import fc5 from '../assets/images/featured-cars/fc5.png';
+import fc6 from '../assets/images/featured-cars/fc6.png';
+import fc7 from '../assets/images/featured-cars/fc7.png';
+import fc8 from '../assets/images/featured-cars/fc8.png';
+
+import client1 from '../assets/images/clients/c1.png';
+import client2 from '../assets/images/clients/c2.png';
+import client3 from '../assets/images/clients/c3.png';
+
+import brand1 from '../assets/images/brand/br1.png';
+import brand2 from '../assets/images/brand/br2.png';
+import brand3 from '../assets/images/brand/br3.png';
+import brand4 from '../assets/images/brand/br4.png';
+import brand5 from '../assets/images/brand/br5.png';
+import brand6 from '../assets/images/brand/br6.png';
 
 const menu = [
   "Home",
@@ -201,4 +210,6 @@ const client = [
   },
 ];
 
-export { menu, searchWithKey, services, carsDetails, featuredCarsDetails, client };
+const brnad = [ brand1, brand2, brand3, brand4, brand5, brand6 ];
+
+export { menu, searchWithKey, services, carsDetails, featuredCarsDetails, client, brnad };

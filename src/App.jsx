@@ -4,6 +4,8 @@ import Service from './components/Service'
 import NewestCar from './components/NewestCar'
 import FeatureCar from './components/FeatureCar'
 import ClientSay from './components/ClientSay'
+import Brands from './components/Brands'
+import Footer from './layout/Footer'
 
 
 const App = () => {
@@ -15,6 +17,8 @@ const App = () => {
       <NewestCar/>
       <FeatureCar/>
       <ClientSay/>
+      <Brands/>
+      <Footer/>
     </div>
   )
 }
