@@ -27,7 +27,7 @@ const Hero = () => {
   // hero animation
   useGSAP(() => {
     gsap.to("#mainNav", {
-      backgroundColor: "rgba(0,0,0,1)",
+      backgroundColor: "#22242c",
       scrollTrigger: {
         trigger: "#home",
         scroller: "body",

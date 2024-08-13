@@ -8,7 +8,7 @@ import NewestCar from './components/NewestCar'
 const App = () => {
   
   return (
-    <div className='w-screen overflow-x-hidden'>
+    <div className='w-screen overflow-x-hidden text-gray-200 bg-gray-800'>
       <Hero/>
       <Service/>
       <NewestCar/>

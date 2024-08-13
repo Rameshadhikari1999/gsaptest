@@ -1,4 +1,7 @@
 import { FaCar, BiSolidCarMechanic, IoDocumentText } from "./incons.jsx";
+import img1 from '../assets/images/new-cars-model/ncm1.png'
+import img2 from '../assets/images/new-cars-model/ncm2.png'
+import img3 from '../assets/images/new-cars-model/ncm3.png'
 
 const menu = [
   "Home",
@@ -89,4 +92,21 @@ const services = [
   },
 ];
 
-export { menu, searchWithKey, services };
+const carsDetails = [
+  {
+    id: 1,
+    name: "chevrolet camaro ZA100",
+    img: img1,
+  },
+  {
+    id: 2,
+    name: "BMW Series-3 Wagon",
+    img: img2,
+  },
+  {
+    id: 3,
+    name: "Ferrari 812 Superfast",
+    img: img3,
+  },
+];
+export { menu, searchWithKey, services, carsDetails };

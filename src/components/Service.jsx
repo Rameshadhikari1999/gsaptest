@@ -17,7 +17,6 @@ const Service = () => {
         start: "top 20%",
         end: "bottom top",
         scrub: true,
-        markers: true,
         pin: true,
       },
     });
@@ -32,14 +31,13 @@ const Service = () => {
         rotate: 360,
       });
     });
-    // tl.reverse();
   }, []);
   return (
     <div id="service" className="w-full h-screen  relative">
       {services.map((service, index) => (
         <div
           key={index}
-          className={`allBox bg-white w-4/6 lg:w-1/4  h-[60%] absolute top-[20%] left-[17%] lg:left-1/3 rounded-lg flex items-start justify-center flex-col shadow-sm shadow-gray-400 hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-1000 p-3 opacity-0 mx-2  
+          className={`allBox bg-[#22242c] text-white w-4/6 lg:w-1/4  h-[60%] absolute top-[20%] left-[17%] lg:left-1/3 rounded-lg flex items-start justify-center flex-col shadow-sm shadow-gray-100 hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-1000 p-3 opacity-0 mx-2  
             `}
         >
           <service.icons size={50} />
@@ -47,10 +45,9 @@ const Service = () => {
             {service.name}
           </h3>
           <p>{service.desc}</p>
+          <div className="w-14 h-1 bg-blue-500 mx-auto my-10"></div>
         </div>
       ))}
-      {/* <div className="w-1/4 h-[60%] bg-green-500 absolute top-[20%] left-1/3"></div>
-      <div className="w-1/4 h-[60%] bg-orange-500 absolute top-[20%] left-1/3"></div> */}
     </div>
   );
 };
