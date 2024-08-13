@@ -10,6 +10,9 @@ import fc5 from '../assets/images/featured-cars/fc5.png'
 import fc6 from '../assets/images/featured-cars/fc6.png'
 import fc7 from '../assets/images/featured-cars/fc7.png'
 import fc8 from '../assets/images/featured-cars/fc8.png'
+import client1 from '../assets/images/clients/c1.png'
+import client2 from '../assets/images/clients/c2.png'
+import client3 from '../assets/images/clients/c3.png'
 
 const menu = [
   "Home",
@@ -177,4 +180,25 @@ const featuredCarsDetails = [
   },
 ]
 
-export { menu, searchWithKey, services, carsDetails, featuredCarsDetails };
+const client = [
+  {
+    id: 1,
+    name: "John Deo",
+    city:"Kathmandu",
+    img: client1,
+  },
+  {
+    id: 2,
+    name: "Mohani Yoadav",
+    city:"Pokhara",
+    img: client2,
+  },
+  {
+    id: 3,
+    name: "Gaurav Jha",
+    city:"Dilhi",
+    img: client3,
+  },
+];
+
+export { menu, searchWithKey, services, carsDetails, featuredCarsDetails, client };

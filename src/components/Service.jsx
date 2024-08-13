@@ -37,7 +37,7 @@ const Service = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className={`allBox bg-[#22242c] text-white w-4/6 lg:w-1/4  h-[60%] absolute top-[20%] left-[17%] lg:left-1/3 rounded-lg flex items-start justify-center flex-col shadow-sm shadow-gray-100 hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-1000 p-3 opacity-0 mx-2  
+          className={`allBox bg-primary text-white w-4/6 lg:w-1/4  h-[60%] absolute top-[20%] left-[17%] lg:left-1/3 rounded-lg flex items-start justify-center flex-col shadow-sm shadow-gray-100 hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-1000 p-3 opacity-0 mx-2  
             `}
         >
           <service.icons size={50} />
