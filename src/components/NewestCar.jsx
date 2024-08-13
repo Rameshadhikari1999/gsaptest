@@ -4,24 +4,26 @@ import React, { useEffect, useState } from 'react'
 import scrollTrigger from 'gsap/ScrollTrigger'
 import Buttons from '../utils/Buttons.jsx'
 import { carsDetails } from '../assets/contents.jsx';
+import SectionHeader from '../utils/SectionHeader.jsx'
 
 gsap.registerPlugin(scrollTrigger)
 
 const NewestCar = () => {
   const [slidWith, setSlidWith] = useState(200);
+  
   useEffect(() => {
     let slider = document.querySelectorAll(".cars");
     let icons = document.querySelectorAll('.icons');
-    const getSlider = () => {
-      slider.forEach((car, i) => {
-        car.style.transform = `translateX(-${slidWith}%)`;
-        car.style.tranisition = "all 0.22s ease";
-      })
-    }
-    setInterval(() => {
-      setSlidWith(slidWith == 200 ? 0 : slidWith + 100);
-      getSlider();
-    }, 3000);
+    // const getSlider = () => {
+    //   slider.forEach((car, i) => {
+    //     car.style.transform = `translateX(-${slidWith}%)`;
+    //     car.style.tranisition = "all 0.22s ease";
+    //   })
+    // }
+    // setInterval(() => {
+    //   setSlidWith(slidWith == 200 ? 0 : slidWith + 100);
+    //   getSlider();
+    // }, 3000);
 
     return () => {
       clearInterval()
@@ -31,11 +33,8 @@ const NewestCar = () => {
   
 
   return (
-    <div id='newcars' className='w-full h-screen'>
-      <div className='w-full'>
-        <p className='text-center text-sm capitalize tracking-wide font-gupter'>checkout the latest cars</p>
-        <h1 className='text-center text-3xl uppercase tracking-widest font-gupter font-bold my-2 py-2 after:content-[""] after:block after:h-[2px] after:w-[100px] after:bg-[#2947c0] after:mx-auto after:mt-5 '>newest cars</h1>
-      </div>
+    <div id='newcars' className='w-full'>
+      <SectionHeader title="newest cars" subTitle="checkout the newest cars"/>
 
       <div id='slider' className='w-full  mb-2 flex gap-5 p-2 mt-10 lg:mt-0 overflow-x-hidden'>
         {carsDetails.map((item, index) =>(

@@ -2,6 +2,14 @@ import { FaCar, BiSolidCarMechanic, IoDocumentText } from "./incons.jsx";
 import img1 from '../assets/images/new-cars-model/ncm1.png'
 import img2 from '../assets/images/new-cars-model/ncm2.png'
 import img3 from '../assets/images/new-cars-model/ncm3.png'
+import fc1 from '../assets/images/featured-cars/fc1.png'
+import fc2 from '../assets/images/featured-cars/fc2.png'
+import fc3 from '../assets/images/featured-cars/fc3.png'
+import fc4 from '../assets/images/featured-cars/fc4.png'
+import fc5 from '../assets/images/featured-cars/fc5.png'
+import fc6 from '../assets/images/featured-cars/fc6.png'
+import fc7 from '../assets/images/featured-cars/fc7.png'
+import fc8 from '../assets/images/featured-cars/fc8.png'
 
 const menu = [
   "Home",
@@ -109,4 +117,64 @@ const carsDetails = [
     img: img3,
   },
 ];
-export { menu, searchWithKey, services, carsDetails };
+
+const featuredCarsDetails = [
+  {
+    id: 1,
+    name: "BMW 6-series gran coupe",
+    img: fc1,
+    price: "Rs. 1,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 2,
+    name: "chevrolet camaro wmv20",
+    img: fc2,
+    price: "Rs. 5,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 3,
+    name: "lamborghini v520",
+    img: fc3,
+    price: "Rs. 8,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 4,
+    name: "audi a3 sedan",
+    img: fc4,
+    price: "Rs. 10,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 5,
+    name: "infiniti z5",
+    img: fc5,
+    price: "Rs. 12,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 6,
+    name: "porsche 718 cayman",
+    img: fc6,
+    price: "Rs. 5,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 7,
+    name: "bmw 8-series coupe",
+    img:fc7,
+    price: "Rs. 5,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+  {
+    id: 8,
+    name: "BMW xseries-6",
+    img:fc8,
+    price: "Rs. 5,00,000",
+    desc:"neque porro quisquaim est, qui dolorem ipsum quia dolor site amet, consectetur, adipisci velit, sed quia non."
+  },
+]
+
+export { menu, searchWithKey, services, carsDetails, featuredCarsDetails };

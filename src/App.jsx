@@ -2,7 +2,8 @@ import React from 'react'
 import Hero from './components/home/Hero'
 import Service from './components/Service'
 import NewestCar from './components/NewestCar'
-
+import FeatureCar from './components/FeatureCar'
+import ClientSay from './components/ClientSay'
 
 
 const App = () => {
@@ -12,6 +13,8 @@ const App = () => {
       <Hero/>
       <Service/>
       <NewestCar/>
+      <FeatureCar/>
+      <ClientSay/>
     </div>
   )
 }
