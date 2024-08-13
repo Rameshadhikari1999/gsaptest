@@ -14,16 +14,16 @@ const NewestCar = () => {
   useEffect(() => {
     let slider = document.querySelectorAll(".cars");
     let icons = document.querySelectorAll('.icons');
-    // const getSlider = () => {
-    //   slider.forEach((car, i) => {
-    //     car.style.transform = `translateX(-${slidWith}%)`;
-    //     car.style.tranisition = "all 0.22s ease";
-    //   })
-    // }
-    // setInterval(() => {
-    //   setSlidWith(slidWith == 200 ? 0 : slidWith + 100);
-    //   getSlider();
-    // }, 3000);
+    const getSlider = () => {
+      slider.forEach((car, i) => {
+        car.style.transform = `translateX(-${slidWith}%)`;
+        car.style.tranisition = "all 0.22s ease";
+      })
+    }
+    setInterval(() => {
+      setSlidWith(slidWith == 200 ? 0 : slidWith + 100);
+      getSlider();
+    }, 3000);
 
     return () => {
       clearInterval()
